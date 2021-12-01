@@ -1,10 +1,15 @@
 -- https://adventofcode.com/2021/day/1
 
--- create table using sqlite3
--- original input data modified to add index column
-create table if not exist data (id int, input int);
-.mode csv;
-.import input_id.csv data;
+drop table temp;
+drop table data;
+
+-- upload data into temp table
+create table temp (input int);
+.mode csv temp;
+.import input.csv temp;
+-- upload data into input table, with autoincrement index
+create table data (id integer primary key autoincrement, input int);
+insert into data(input) select * from temp;
 
 -- verify base table
 select * from data limit 10;
