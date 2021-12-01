@@ -8,6 +8,7 @@ create table if not exist data (id int, input int);
 select * from data limit 10;
 
 -- part 1
+-- 1696
 SELECT SUM(count_positive) 
 FROM (
 		SELECT id
@@ -23,6 +24,7 @@ FROM (
 
 
 -- part 2
+-- 1796
 SELECT SUM(count_positive) 
 FROM (
 		SELECT id
