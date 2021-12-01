@@ -1,3 +1,5 @@
+-- https://adventofcode.com/2021/day/1
+
 -- create table using sqlite3
 -- original input data modified to add index column
 create table if not exist data (id int, input int);
