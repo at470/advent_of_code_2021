@@ -1,6 +1,9 @@
+/* set up
 .table;
 drop table temp;
 drop table input;
+*/
+
 
 -- upload data into temp table
 create table temp (input int);
@@ -16,7 +19,6 @@ insert into data(input) select * from temp;
 ALTER TABLE data ADD x REAL DEFAULT 0;
 ALTER TABLE data ADD y REAL DEFAULT 0;
 */
-
 
 -- verify table
 select * from data limit 10;
@@ -42,7 +44,7 @@ FROM (
 
 
 /*
-can't do this in SQL
+can't do this in SQL - had to use excel... oh no..
 -- part 2
 select id
 , input
