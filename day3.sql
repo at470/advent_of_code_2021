@@ -122,6 +122,8 @@ bit_1  bit_2  bit_3  bit_4  bit_5  bit_6  bit_7  bit_8  bit_9  bit_10  bit_11  b
 
 111100111111 -- 3903
 000011000000 -- 192
+
+https://www.rapidtables.com/convert/number/binary-to-decimal.html?x=1001100101
 */
 
 
