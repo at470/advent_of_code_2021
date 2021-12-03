@@ -53,7 +53,7 @@ insert into data_bits select * , CASE WHEN substr(input, -12,1) IS '' THEN 0 ELS
 , CASE WHEN substr(input, -1,1) IS '' THEN 0 ELSE substr(input, -1,1) END as bit_1
 from data;
 
--- count 1s 
+-- binary
 SELECT case when bit_1_one > zero_bit_1 then 1
 when bit_1_one < zero_bit_1 then 0 else 'error' end bit_1
 ,case when bit_2_one > zero_bit_2 then 1
@@ -125,23 +125,4 @@ bit_1  bit_2  bit_3  bit_4  bit_5  bit_6  bit_7  bit_8  bit_9  bit_10  bit_11  b
 */
 
 
-
-
-/*
-can't do this in SQL - had to use excel... oh no..
--- part 2
-select id
-, input
-, (x_direction_vector*scalar_value) horizonal_position
-, (y_direction_vector*scalar_value) depth_position
-, case when x_direction_vector = 1 then depth*scalar_value else 0 end aim
-FROM (
-select *
-, case when input LIKE '%forward%' THEN 1 ELSE 0 END x_direction_vector
-, case when input LIKE '%down%' THEN 1 when input LIKE '%up%' THEN -1 ELSE 0 END y_direction_vector
-, substr(input, instr(input,' ')-LENGTH(input)) scalar_value
-from data
-) limit 10;
-
-*/
 
