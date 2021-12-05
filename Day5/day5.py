@@ -67,8 +67,6 @@ if all_straight_lines != None:
             max_y = max([straight_line[0][1], straight_line[1][1]])
             for i in range(min_y, max_y + 1):
                 grid[i][x_static] = grid[i][x_static] + 1
-# lambda <arguments> : <Return Value if condition is True> if <condition> 
-#                               else <Return Value if condition is False>
 
 if all_diagonal_lines != None:
     for diagonal_line in all_diagonal_lines:
@@ -101,24 +99,3 @@ for row in grid:
 
 print(count)
 
-
-# grid = [
-#     [0, 0, 0, 0 ,0],
-#     [0, 0, 0, 0 ,0],
-#     [0, 10, 0, 0 ,0],
-#     [0, 0, 0, 8 ,0],
-#     [0, 0, 0, 0 ,0],
-# ]
-
-
-# ['414,379 -> 827,379\n', '683,947 -> 183,947\n']
-# [
-#     [
-#         [414,379],
-#         [827,379]
-#     ],
-#     [
-#         [683,947],
-#         [827,37]
-#     ]
-# ]
