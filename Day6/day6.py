@@ -4,14 +4,14 @@
 # path = '/Users/akikot/advent_of_code_2021/advent_of_code_2021/Day6/sample_input.txt'
 path = '/Users/akiko/advent_of_code_2021/advent_of_code_2021/Day6/input.txt'
 
-raw_data_array = open(path, "r").readlines()
+raw_data = open(path, "r").readlines()
 
 # raw_data_array -> ['4,1,4,1,3']
 # data_str -> '4,1,4,1,3'
 # fish_str -> '4'
 # fish -> [4,1,4,1,3]
 
-for data_str in raw_data_array:
+for data_str in raw_data:
     fish_str = data_str.split(',')
     fish = [int(i) for i in fish_str]
 
