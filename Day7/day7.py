@@ -1,4 +1,5 @@
 import numpy as np
+import pprint as pp
 
 # IGNORE
 # def mode_data(data):
@@ -67,18 +68,16 @@ for data_str in raw_data:
 # part 2
 avg = np.mean(h_pos_list) #axis set at avg
 axis_around_here = [round(avg)-1, round(avg), round(avg)+1, avg]
-print(axis_around_here)
+
+answers = []
 
 for i in axis_around_here:
-	print(i)
 	fuel_req = sum(total_h_movement_complex(h_pos_list,i))
-	print(fuel_req)
+	answers.append([i,fuel_req])
 
-# 467.0
-# 89791146.0
-# 468.0
-# 89791190.0
-# 469.0
-# 89792235.0
-# 467.55
-# 89791046.45
+pp.pprint(answers)
+
+# [[467.0, 89791146.0],
+#  [468.0, 89791190.0],
+#  [469.0, 89792235.0],
+#  [467.55000000000001, 89791046.449999765]]
