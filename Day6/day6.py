@@ -6,7 +6,7 @@ path = '/Users/akiko/advent_of_code_2021/advent_of_code_2021/Day6/input.txt'
 
 raw_data = open(path, "r").readlines()
 
-# raw_data_array -> ['4,1,4,1,3']
+# raw_data -> ['4,1,4,1,3']
 # data_str -> '4,1,4,1,3'
 # fish_str -> '4'
 # fish -> [4,1,4,1,3]
