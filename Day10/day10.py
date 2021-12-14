@@ -68,9 +68,9 @@ for string in raw_data:
     stack = [] #push/append things onto the end, pop things off the end
     for index, chara in enumerate(string):
         if parenthesis_type[chara] == 'opening':
-            stack.append(chara)
+            stack.append(chara) #pushing to stack
         elif parenthesis_type[chara] == 'closing':
-            if stack.pop() != parenthesis_pair[chara]:
+            if stack.pop() != parenthesis_pair[chara]: #remove last element from stack and check if the last element isn't equal to the look up value
                 syn_err_count[chara] = syn_err_count[chara] + 1
                 # stop at the first illegal character
                 break #stop the current for/while loop
