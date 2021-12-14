@@ -1,3 +1,5 @@
+import pprint as pp
+
 # input = '{([(<{}[<>[]}>{[]{[(<()>' #problem
 # input = '[({(<(())[]>[[{[]{<()<>>'
 
@@ -49,14 +51,21 @@ completion_count = {
     '>': 0 
 }
 
+points = {
+    ')': 1,
+    ']': 2,
+    '}': 3,
+    '>': 4 
+}
 
-# raw_data = ['{([(<{}[<>[]}>{[]{[(<()>','[({(<(())[]>[[{[]{<()<>>)', '[({(<(())[]>[[{[]{<()<>>', '[(()[<>])]({[<{<<[]>>(']
-raw_data = ['[']
+
+
 incomplete_lines = []
 required_parenthesis = []
 
-stack = [] #push/append things onto the end, pop things off the end
+
 for string in raw_data:
+    stack = [] #push/append things onto the end, pop things off the end
     for index, chara in enumerate(string):
         if parenthesis_type[chara] == 'opening':
             stack.append(chara)
@@ -68,6 +77,7 @@ for string in raw_data:
         if index == len(string)-1:
             incomplete_lines.append(string)
             required_parenthesis.append(stack)
+print(required_parenthesis)
 
 
 # print(syn_err_count)
@@ -78,17 +88,18 @@ for string in raw_data:
 # print(total_score)
 # 343863
 
-print(incomplete_lines)
-print(required_parenthesis)
+score_list =[]
+for line in required_parenthesis:
+    score = 0
+    for index, value in enumerate(reversed(line)):
+        closing_chara = parenthesis_pair[value]
+        score = score*5 + points[closing_chara]
+    score_list.append(score)
 
-temp = []
-for index, string in enumerate(incomplete_lines):
-    for i, requirements in enumerate(required_parenthesis):
-        var = required_parenthesis[index].pop() #strings ['<','<','['']
-        # print(var)
-        temp.append(parenthesis_pair[var])
-        # print(incomplete_lines[index])
+print(score_list)
 
-print(temp)
-# [[')', '>', '>'],[')', '>', '>'],[')', '>', '>']]
+score_list.sort()
+mid = len(score_list) // 2
+res = (score_list[mid] + score_list[~mid]) / 2
 
+print(res)
