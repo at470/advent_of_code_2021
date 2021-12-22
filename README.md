@@ -1,6 +1,5 @@
 # Advent of Code 2021
 
-<<<<<<< HEAD
 SQL, Excel and some basic Python...
 =======
 Let's see how many of these I can do before I hit a lack-of-coding-ability wall...
@@ -16,4 +15,3 @@ Day 8: digital displays
 Day 9: low points and basin areas, recursion
 Day 10: syntax scoring
 Day 11: flashing octopuses, recursion
->>>>>>> 4415cc1 (updated readme with info per day)
