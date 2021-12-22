@@ -13,7 +13,7 @@ Day 5: vents with overlapping lines on grid
 Day 6: lanternfish
 Day 7: moving points to some x position
 Day 8: digital displays
-Day 9: low points and basin areas
+Day 9: low points and basin areas, recursion
 Day 10: syntax scoring
-Day 11: flashing octopuses
+Day 11: flashing octopuses, recursion
 >>>>>>> 4415cc1 (updated readme with info per day)
